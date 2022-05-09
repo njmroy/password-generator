@@ -13,8 +13,8 @@ function generatePassword() {
     let randomIndex = 0;
     let password = "";
     //get current password length
-    passLength = document.querySelector("#pass-length").value;
-    for (let i=0;i<passwordLength;i++){
+    let passLength = document.querySelector("#pass-length").value;
+    for (let i=0;i<passLength;i++){
         randomIndex = Math.floor(Math.random()*charList.length) 
         password += characters[randomIndex];
     }

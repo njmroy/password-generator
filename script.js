@@ -1,6 +1,6 @@
 let characters = "abcdefghijklmnopqrstuvwxzyABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()?";
 const charList = characters.split("");
-let passwordLength = 15;
+let passLength = document.querySelector("#pass-length");
 //Get HTML elements to update
 pw1 = document.getElementById("password1-element");
 pw2 = document.getElementById("password2-element");
@@ -20,10 +20,10 @@ function generatePassword() {
     }
    return password;
 }
-let passLength = document.querySelector("#pass-length");
+
 passLength.addEventListener('input', function () {
-    passwordLength = this.value;
-    console.log(passwordLength);
+    passLength = this.value;
+    console.log(passLength);
     renderPasswords();
 })
 
